@@ -1,0 +1,14 @@
+.img{
+    height:40px;
+}
+
+.namePriceText{
+    font-weight: bold;
+    margin: 3px;
+}
+
+.addText{
+    color: rgba(203, 171, 9, 0.674);
+    padding-left: 10px;
+    font-weight: bold;
+}

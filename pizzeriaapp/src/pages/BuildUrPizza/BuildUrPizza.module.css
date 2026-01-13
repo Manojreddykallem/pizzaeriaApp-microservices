@@ -1,0 +1,85 @@
+.bgContainer {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+  padding-top: 70px;
+}
+
+.footer {
+  font-size: 14px;
+  color: #777;
+  margin-top: 40px;
+  margin-top: 10px;
+}
+
+
+.button {
+  background-color: black;
+  color: rgba(203, 171, 9, 0.895);
+  border: none;
+  border-radius: 3px;
+  padding: 2px;
+  width: 120px;
+  margin-top: 10px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 37, 37, 0.895);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #d8cc93;
+  width: 420px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgba(54, 52, 52, 0.895);
+}
+
+.detailsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.detailsText{
+  margin: 0px;
+}
+
+.optionBlock {
+  margin: 20px auto;
+  padding: 15px;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+
+.optionBlock h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+.optionBlock label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+.optionBlock input[type="radio"] {
+  cursor: pointer;
+}

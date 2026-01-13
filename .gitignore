@@ -1,0 +1,39 @@
+# ========================
+# Node / Backend services
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ========================
+# Environment variables
+# ========================
+.env
+.env.*
+*.env
+
+# ========================
+# Build / compiled output
+# ========================
+dist/
+build/
+target/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / Editor files
+# ========================
+.vscode/
+.idea/

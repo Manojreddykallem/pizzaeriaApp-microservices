@@ -1,0 +1,55 @@
+.aboutContainer {
+  max-width: 1300px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.split {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.image {
+  width: 45%;
+  border-radius: 4px;
+}
+
+.small {
+  width: 200px;
+}
+
+.deliveryText {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 40px;
+}

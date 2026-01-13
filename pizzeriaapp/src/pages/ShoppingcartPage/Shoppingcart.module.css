@@ -1,0 +1,54 @@
+.bgContainer {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1300px;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.itemSection {
+  flex: 2;
+}
+
+.summarySection {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 16px;
+  height: fit-content;
+  margin-top: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.successScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.tickIcon {
+  font-size: 80px;
+  color: green;
+  margin-bottom: 12px;
+}

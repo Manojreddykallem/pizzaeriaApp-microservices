@@ -1,0 +1,78 @@
+.grid {
+  display: grid;
+  max-width: 1300px;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  padding-top: 70px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 37, 37, 0.895);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #d8cc93;
+  width: 420px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgba(54, 52, 52, 0.895);
+}
+
+.img {
+  height: 100px;
+}
+
+.previewBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* TWO HALVES */
+  column-gap: 20px; /* gap between columns */
+  row-gap: 5px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* TWO HALVES */
+  column-gap: 32px; /* gap between columns */
+}
+
+.listItems {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  min-width: 100px;
+}
+
+.price {
+  min-width: 50px;
+}
+
+.input {
+  margin-left: auto;
+}
+
+.prices{
+  margin: 2px;
+}

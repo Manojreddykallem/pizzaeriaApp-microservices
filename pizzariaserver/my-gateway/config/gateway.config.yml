@@ -1,0 +1,75 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  host: localhost
+apiEndpoints:
+  pizzasAPI:
+    host: localhost
+    paths:
+      - /pizzas
+  ingridentsAPI:
+    host: localhost
+    paths:
+      - /ingridents
+  shoppingcartApi:
+    host: localhost
+    paths:
+      - /cart/:cartId/item
+      - /cart/:cartId
+      - /cart/:cartId/item/:itemId
+      - /cart/:cartId/item/:itemId
+serviceEndpoints:
+  pizzaService:
+    url: http://localhost:5001
+  ingridentsSerivce:
+    url: http://localhost:5002
+  shoppingcartService:
+    url: http://localhost:5003
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+pipelines:
+  default:
+    apiEndpoints:
+      - "*"
+    policies:
+      - cors:
+          - action:
+              origin: "http://localhost:5173"
+              methods: "GET,POST,PUT,DELETE,OPTIONS"
+              allowedHeaders:
+                - Content-Type
+                - Authorization
+  pizzaspipeline:
+    apiEndpoints:
+      - pizzasAPI
+    policies:
+      # Uncomment `key-auth:` when instructed to in the Getting Started guide.
+      # - key-auth:
+      - proxy:
+          - action:
+              serviceEndpoint: pizzaService
+              changeOrigin: true
+  ingridentspipeline:
+    apiEndpoints:
+      - ingridentsAPI
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: ingridentsSerivce
+              changeOrigin: true
+  shoppingcartpipeline:
+    apiEndpoints:
+      - shoppingcartApi
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: shoppingcartService
+              changeOrigin: true
