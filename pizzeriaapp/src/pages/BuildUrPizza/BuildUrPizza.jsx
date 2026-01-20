@@ -83,6 +83,7 @@ const BuildUrPizza = () => {
         `http://localhost:8080/cart/${cartId}/item`,
         payload
       );
+      alert("Customized Pizza added to cart successfully!");
       setShoppingCart(res.data.items);
       setShowPreview(false);
       setSelectedIngridents([]);

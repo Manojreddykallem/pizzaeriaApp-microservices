@@ -31,13 +31,13 @@ const OrderPizza = () => {
     setSelectedIngridents((prev) =>
       checked
         ? [...prev, ingrident]
-        : prev.filter((each) => each.id !== ingrident.id)
+        : prev.filter((each) => each.id !== ingrident.id),
     );
   };
 
   const extraPrice = selectedIngridents.reduce(
     (sum, ingrident) => sum + ingrident.price,
-    0
+    0,
   );
 
   const totalPrice = selectedPizza ? selectedPizza.price + extraPrice : 0;
@@ -56,9 +56,9 @@ const OrderPizza = () => {
 
       const res = await axios.post(
         `http://localhost:8080/cart/${cartId}/item`,
-        payload
+        payload,
       );
-
+      alert("Pizza added to cart successfully!");
       setShoppingCart(res.data.items);
       setShowPreview(false);
       setSelectedPizza(null);
@@ -83,9 +83,9 @@ const OrderPizza = () => {
 
       const res = await axios.post(
         `http://localhost:8080/cart/${cartId}/item`,
-        payload
+        payload,
       );
-
+      alert("Customized Pizza added to cart successfully!");
       setShoppingCart(res.data.items);
 
       setShowPreview(false);
@@ -140,7 +140,7 @@ const OrderPizza = () => {
         <div
           className={styles.overlay}
           onClick={() => {
-            setShowPreview(false), setCustomizePizza(false);
+            (setShowPreview(false), setCustomizePizza(false));
           }}
         >
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
